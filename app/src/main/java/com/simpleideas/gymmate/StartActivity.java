@@ -351,7 +351,7 @@ public class StartActivity extends AppCompatActivity implements DynamicFragment.
             @Override
             public void onPageScrollStateChanged(int state) {
 
-                fab.hide();
+                //fab.hide();
 
                 //DynamicFragment.showFAB();
 //                switch (state){

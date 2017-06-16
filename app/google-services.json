@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "226555645569",
+    "firebase_url": "https://gymmate-f1e24.firebaseio.com",
+    "project_id": "gymmate-f1e24",
+    "storage_bucket": "gymmate-f1e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226555645569:android:f731c95ccd936c9d",
+        "android_client_info": {
+          "package_name": "com.simpleideas.gymmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226555645569-04psprp3c4bq0e8i7162br30nr6uoqdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simpleideas.gymmate",
+            "certificate_hash": "1e352141790d76462417d217a99cbb5b1f26ba33"
+          }
+        },
+        {
+          "client_id": "226555645569-bmmp71huagkfkj5424a3p3d4g05i2tb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simpleideas.gymmate",
+            "certificate_hash": "c3f449a628d500cce8e16626ab55af7a79ba0123"
+          }
+        },
+        {
+          "client_id": "226555645569-bnbc847q4v94lc41a3a6j9827o6fj991.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkVEHnfYJIIpgvOdTKlMnOmqogITrwW14"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226555645569-bnbc847q4v94lc41a3a6j9827o6fj991.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

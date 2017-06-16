@@ -192,7 +192,6 @@ public class DialogForAddingContent extends AppCompatActivity implements View.On
         }
     }
 
-
     private void manageColorPickerDialog(){
 
         ColorPickerDialog.newBuilder()

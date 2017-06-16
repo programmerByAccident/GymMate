@@ -38,8 +38,45 @@
             android:layout_alignBottom="@id/clock_sketc"
             android:layout_alignLeft="@id/clock_sketc"
             android:layout_alignRight="@id/clock_sketc"
-            android:scaleType="fitXY"
+
             android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_alignTop="@id/time_elapsed"
+            android:scaleType="fitXY"
+            android:layout_alignBottom="@id/time_elapsed"
+            android:layout_alignLeft="@id/time_elapsed"
+            android:layout_alignRight="@id/time_elapsed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/chronometer_inside_deco"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/submit_chrono"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ap_black"
+        android:text="submit"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/clock_sketc"
+        android:layout_toStartOf="@+id/clock_sketc"
+        android:layout_marginBottom="46dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/required_time"
+        android:inputType="number"/>
 
         <!--<ImageButton-->
             <!--android:id="@+id/start_timer"-->

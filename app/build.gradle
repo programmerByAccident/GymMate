@@ -25,7 +25,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
     //compile 'com.androidplot:androidplot-core:1.4.1'
-    compile files('C:/Users/George/StudioProjects/GymMate/libs/joda-time-2.9.4.jar')
+    compile files('C:/Users/Geprge/AndroidStudioProjects/GymMate2/libs/joda-time-2.9.4.jar')
     //compile 'com.nshmura:recyclertablayout:1.1.0'
     compile 'com.github.bmarrdev:android-DecoView-charting:v1.2'
     compile 'com.android.support:design:25.0.0'
