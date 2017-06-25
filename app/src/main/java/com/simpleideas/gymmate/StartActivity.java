@@ -15,12 +15,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import android.util.AttributeSet;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,13 +84,58 @@ public class StartActivity extends AppCompatActivity implements DynamicFragment.
 
 
         navigationView.setNavigationItemSelectedListener(this);
+
         fab = (FloatingActionButton) findViewById(R.id.activity_start_fab);
+        AlphaAnimation alphaAnimationGo = new AlphaAnimation(0.2f, 1.0f);
+        AlphaAnimation alphaAnimationCome = new AlphaAnimation(1.0f, 0.2f);
+        alphaAnimationCome.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                fab.show();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                animation.setRepeatMode(Animation.INFINITE);
+            }
+        });
+        alphaAnimationGo.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                fab.hide();;
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                animation.setRepeatMode(Animation.INFINITE);
+            }
+        });
+        alphaAnimationGo.setDuration(500);
+        alphaAnimationCome.setDuration(500);
+
+        fab.startAnimation(alphaAnimationGo);
+        fab.startAnimation(alphaAnimationCome);
+
+
+        alphaAnimationGo.start();
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setFabActions();
             }
         });
+
     }
 
     @Override
@@ -194,12 +241,14 @@ public class StartActivity extends AppCompatActivity implements DynamicFragment.
         String[] legs = {"Squat", "Front Squat", "Snatch","Power Clean","Deadlift","Bulgarian Split Squat","Hack Squat","Dumbbell Lunge","Leg Press","Romanian Deadlift","Machine Squat"};
         String[] arms = {"Standing Barbell Curl", "Standing Cable Curl", "Dumbbell Curl","Weighted Chin-Up","Reverse-Grip Barbell Row","Rope Hammer Curl","Incline-Bench Curl","Concentration Curl","Preacher Curl","Barbell Drag Curl"};
         String[] shoulders = {"Barbell Push Press", "Barbell Standing Military Press","Dumbbell Standing Military Press","Dumbbell Incline Row","Seated Overhead Dumbbell Press","Seated Overhead Barbell Press","Upright Row","Arnold Press","Dumbbell Lateral Raise","Front Dumbbell Raise"};
+        String[] cardio = {"Treadmill", "Stair Mill", "Rowing Machine", "Spin Bike"};
 
         muscleMap.put(Constants.ARMS, arms);
         muscleMap.put(Constants.BACK, back);
         muscleMap.put(Constants.CHEST, chest);
         muscleMap.put(Constants.LEGS, legs);
         muscleMap.put(Constants.SHOULDERS, shoulders);
+        muscleMap.put(Constants.CARDIO, cardio);
 
         for (String element:groups) {
             SharedPreferences preferencesMuscle = getSharedPreferences(element, MODE_PRIVATE);
